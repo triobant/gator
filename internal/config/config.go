@@ -37,3 +37,12 @@ func Read() (Config, error) {
 
     return cfg, nil
 }
+
+func getConfigFilePath() (string, error) {
+    home, err := os.UserHomeDir()
+    if err != nil {
+        return "", nil
+    }
+    fullPath := filepath.Join(home, configFileName)
+    return fullPath, nil
+}
