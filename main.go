@@ -4,7 +4,7 @@ import (
     "fmt"
     "log"
 
-    "github.com/triobant/go-blog-aggregator/config"
+    "github.com/triobant/go-blog-aggregator/internal/config"
 )
 
 func main() {
