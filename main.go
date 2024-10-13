@@ -18,6 +18,11 @@ func main() {
         log.Fatalf("error reading config: %v", err)
     }
 
+    db, err := sql.Open("postgres", dbURL)
+    if err != nil {
+        log.Fatalf("error opening database: %v", err)
+    }
+
     programState := &state{
         cfg: &cfg,
     }
