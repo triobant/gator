@@ -9,6 +9,7 @@ import (
 )
 
 type state struct {
+    db  *database.Queries
     cfg *config.Config
 }
 
@@ -22,6 +23,7 @@ func main() {
     if err != nil {
         log.Fatalf("error opening database: %v", err)
     }
+    dbQueries := database.New(db)
 
     programState := &state{
         cfg: &cfg,
