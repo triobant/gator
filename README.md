@@ -1,6 +1,6 @@
 # go-blog-aggregator or gator
 
-## Overview
+A multi-player command line tool for aggregating RSS feeds and viewing the posts.
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
@@ -9,13 +9,13 @@
 
 ## Prerequisites
 
-You need to have *postgresql* and [*go*](https://go.dev/doc/install) installed to run *gator*-cli tool.
+You need to have *postgresql* and [*go*](https://go.dev/doc/install) installed to run *gator* cli tool.
 
 **Debian/Ubuntu:**
-`sudo apt install postgresql`
+```sudo apt install postgresql```
 
 **Arch:**
-`sudo pacman -S postgresql`
+```sudo pacman -S postgresql```
 
 ## Installation
 
