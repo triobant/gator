@@ -1,4 +1,4 @@
-module github.com/triobant/go-blog-aggregator
+module github.com/triobant/gator
 
 go 1.23.1
 
