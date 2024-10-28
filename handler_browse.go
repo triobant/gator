@@ -34,4 +34,6 @@ func handlerBrowse(s *state, cmd command, user database.User) error {
         fmt.Printf("Link: %s\n", post.Url)
         fmt.Println("=====================================")
     }
+
+    return nil
 }
