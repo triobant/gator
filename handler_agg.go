@@ -24,9 +24,9 @@ func handlerAgg(s *state, cmd command) error {
 
     log.Printf("Collecting feeds every %s...", timeBetweenRequests)
 
-    ticket := time.NewTicker(timeBetweenRequests)
+    ticker := time.NewTicker(timeBetweenRequests)
     for ; ; <-ticker.C {
-        srapeFeeds(s)
+        scrapeFeeds(s)
     }
 }
 
@@ -66,7 +66,7 @@ func scrapeFeed(db *database.Queries, feed database.Feed) {
             CreatedAt:      time.Now().UTC(),
             UpdatedAt:      time.Now().UTC(),
             FeedID:         feed.ID,
-            title:          item.title,
+            Title:          item.Title,
             Description:    sql.NullString{
                 String:     item.Description,
                 Valid:      true,
